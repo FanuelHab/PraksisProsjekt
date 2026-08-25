@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Practice journal and portfolio site for an IT and Information Systems student at UiA interning at Reviver."
+    />
+    <title>Practice at Reviver | UiA Student Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="#home">Your Name</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#practice">Practice</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#about-me">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="section hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">University Practice Project</p>
+            <h1>IT and Information Systems Student at UiA</h1>
+            <p class="lead">
+              I am completing my practice period at <strong>Reviver</strong>. This website is my professional
+              practice journal where I document projects, learning, and reflections throughout the internship.
+            </p>
+            <a class="button" href="#journal">Go to Practice Journal</a>
+          </div>
+          <aside class="card">
+            <h2>About the practice</h2>
+            <p>
+              This site is part of a UiA assignment and will be updated regularly during the practice period.
+              It is built to communicate progress with students, supervisors, and others interested in my
+              internship experience.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="practice" class="section muted">
+        <div class="container">
+          <h2>About Reviver</h2>
+          <p class="section-intro">
+            The details below are intentionally placeholders and can be replaced as my understanding of the
+            company grows.
+          </p>
+          <div class="grid cards-2">
+            <article class="card">
+              <h3>What Reviver does</h3>
+              <p>[Placeholder] Short description of Reviver's services or products.</p>
+            </article>
+            <article class="card">
+              <h3>Company type</h3>
+              <p>[Placeholder] Industry, size, and company profile information.</p>
+            </article>
+            <article class="card">
+              <h3>Why I chose practice here</h3>
+              <p>[Placeholder] Motivation for selecting Reviver for my practice period.</p>
+            </article>
+            <article class="card">
+              <h3>Connection to IT and information systems</h3>
+              <p>[Placeholder] How company work aligns with IT/information systems studies.</p>
+            </article>
+          </div>
+          <article class="card company-card">
+            <h3>Company information</h3>
+            <ul>
+              <li><strong>Company:</strong> Reviver</li>
+              <li><strong>Location:</strong> [Placeholder]</li>
+              <li>
+                <strong>Website:</strong>
+                <a href="#" aria-label="Placeholder link for Reviver website">[Placeholder URL]</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="journal" class="section">
+        <div class="container">
+          <h2>Practice Journal</h2>
+          <p class="section-intro">
+            Weekly entries are generated from a simple data structure in JavaScript so new entries can be added
+            quickly without changing page layout.
+          </p>
+          <div id="journal-list" class="timeline" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="section muted">
+        <div class="container">
+          <h2>Tasks and Projects</h2>
+          <p class="section-intro">Larger tasks and project contributions during the practice period.</p>
+          <div id="project-list" class="grid cards-2" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="learning" class="section">
+        <div class="container">
+          <h2>Learning</h2>
+          <p class="section-intro">
+            This section tracks growth areas and can be updated continuously throughout practice.
+          </p>
+          <div class="grid cards-3">
+            <article class="card"><h3>Technical skills</h3><p>[Placeholder] Concepts, architecture, and coding skills.</p></article>
+            <article class="card"><h3>Tools and technologies</h3><p>[Placeholder] Platforms, frameworks, and workflows used.</p></article>
+            <article class="card"><h3>Collaboration</h3><p>[Placeholder] Teamwork and collaboration experiences.</p></article>
+            <article class="card"><h3>Communication</h3><p>[Placeholder] Presentations, feedback, and stakeholder communication.</p></article>
+            <article class="card"><h3>Problem solving</h3><p>[Placeholder] Challenges analyzed and how they were solved.</p></article>
+            <article class="card"><h3>Professional experience</h3><p>[Placeholder] Professional growth and workplace understanding.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-me" class="section muted">
+        <div class="container about-grid">
+          <div>
+            <h2>About Me</h2>
+            <p>
+              I am an IT and Information Systems student at UiA with interests in software development,
+              data-driven systems, and practical problem solving.
+            </p>
+            <p>
+              Through this practice period, I hope to deepen my technical skills, strengthen collaboration and
+              communication in professional teams, and connect theory from university to real-world work.
+            </p>
+          </div>
+          <figure class="profile-card card">
+            <img src="assets/images/profile-placeholder.svg" alt="Placeholder profile illustration" />
+            <figcaption>Profile image placeholder</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name · UiA Practice at Reviver</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
