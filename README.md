@@ -1,19 +1,19 @@
 # PraksisProsjekt
 
-A clean, responsive practice website template for an IT and Information Systems student at UiA documenting a practice period at Reviver.
+Responsiv praksisnettside for en student i IT og informasjonssystemer ved UiA som dokumenterer praksisperioden hos Reviver.
 
-## Structure
+## Struktur
 
-- `/index.html` - Main page and all sections
-- `/assets/css/styles.css` - Styling and responsive layout
-- `/assets/js/data.js` - Journal and project placeholder data
-- `/assets/js/main.js` - Dynamic rendering and mobile navigation
-- `/assets/images/profile-placeholder.svg` - Placeholder profile image
+- `/index.html` — Hovedside med alle seksjoner
+- `/assets/css/styles.css` — Styling og responsivt layout
+- `/assets/js/data.js` — Journal- og prosjektdata
+- `/assets/js/main.js` — Dynamisk rendering og mobilmeny
+- `/assets/images/profile-placeholder.svg` — Plassholder for profilbilde
 
-## Update journal entries
+## Oppdatere journalinnlegg
 
-Add new items in `assets/js/data.js` under `journalEntries` using the same object format (`week`, `date`, `title`, `summary`, `workedOn`, `learned`, `challenges`, `reflection`, `tools`).
+Legg til nye objekter i `assets/js/data.js` under `journalEntries` med feltene `week`, `date`, `title`, `summary`, `workedOn`, `learned`, `challenges`, `reflection` og `tools`.
 
-## Run locally
+## Kjøre lokalt
 
-Open `index.html` directly in a browser, or serve the folder with a simple static server.
+Åpne `index.html` i nettleseren, eller server mappen med en enkel statisk server.

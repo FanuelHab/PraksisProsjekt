@@ -10,15 +10,15 @@
     container.innerHTML = content.journalEntries
       .map(
         (entry) => `
-          <article class="card" tabindex="0">
+          <article class="timeline-entry" tabindex="0">
             <p class="meta">${entry.week} · ${entry.date}</p>
             <h3>${entry.title}</h3>
-            <p><strong>Summary:</strong> ${entry.summary}</p>
-            <p><strong>What I worked on:</strong> ${entry.workedOn}</p>
-            <p><strong>What I learned:</strong> ${entry.learned}</p>
-            <p><strong>Challenges:</strong> ${entry.challenges}</p>
-            <p><strong>Reflection:</strong> ${entry.reflection}</p>
-            <div class="tag-list" aria-label="Technologies and tools used">
+            <p class="entry-field"><strong>Sammendrag</strong> ${entry.summary}</p>
+            <p class="entry-field"><strong>Hva jeg jobbet med</strong> ${entry.workedOn}</p>
+            <p class="entry-field"><strong>Hva jeg lærte</strong> ${entry.learned}</p>
+            <p class="entry-field"><strong>Utfordringer</strong> ${entry.challenges}</p>
+            <p class="entry-field"><strong>Refleksjon</strong> ${entry.reflection}</p>
+            <div class="tag-list" aria-label="Teknologier og verktøy">
               ${entry.tools.map((tool) => `<span class="tag">${tool}</span>`).join("")}
             </div>
           </article>
@@ -36,14 +36,14 @@
     container.innerHTML = content.projects
       .map(
         (project) => `
-          <article class="card" tabindex="0">
+          <article class="project-entry" tabindex="0">
+            <span class="status">${project.status}</span>
             <h3>${project.name}</h3>
-            <p><strong>Description:</strong> ${project.description}</p>
-            <p><strong>My role:</strong> ${project.role}</p>
-            <p><strong>What I contributed:</strong> ${project.contribution}</p>
-            <p><strong>Current status:</strong> ${project.status}</p>
-            <p><strong>What I learned:</strong> ${project.learned}</p>
-            <div class="tag-list" aria-label="Project technologies and tools">
+            <p class="entry-field"><strong>Beskrivelse</strong> ${project.description}</p>
+            <p class="entry-field"><strong>Min rolle</strong> ${project.role}</p>
+            <p class="entry-field"><strong>Bidrag</strong> ${project.contribution}</p>
+            <p class="entry-field"><strong>Læringsutbytte</strong> ${project.learned}</p>
+            <div class="tag-list" aria-label="Prosjektteknologier">
               ${project.technologies.map((technology) => `<span class="tag">${technology}</span>`).join("")}
             </div>
           </article>
@@ -77,7 +77,7 @@
   const setYear = () => {
     const yearNode = document.getElementById("year");
     if (yearNode) {
-      yearNode.textContent = new Date().getFullYear();
+      yearNode.textContent = String(new Date().getFullYear());
     }
   };
 

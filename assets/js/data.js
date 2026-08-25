@@ -1,46 +1,46 @@
 window.practiceContent = {
   journalEntries: [
     {
-      week: "Week 1",
-      date: "[Placeholder date range]",
-      title: "Getting started",
-      summary: "Introduction to the team, systems, and goals for the practice period.",
-      workedOn: "[Placeholder] Onboarding activities and environment setup.",
-      learned: "[Placeholder] Insights about workflows, tools, and company routines.",
-      challenges: "[Placeholder] First-week questions and learning curve.",
-      reflection: "[Placeholder] Initial thoughts about expectations and development goals.",
-      tools: ["[Placeholder tool 1]", "[Placeholder tool 2]"]
+      week: "Uke 1",
+      date: "[Fyll inn datointervall]",
+      title: "Oppstart",
+      summary: "Introduksjon til teamet, systemene og målene for praksisperioden.",
+      workedOn: "[Fyll inn] Onboarding og oppsett av arbeidsmiljø.",
+      learned: "[Fyll inn] Første innsikt i arbeidsflyter, verktøy og rutiner.",
+      challenges: "[Fyll inn] Spørsmål og læringskurve i oppstartsuken.",
+      reflection: "[Fyll inn] Tanker om forventninger og egne utviklingsmål.",
+      tools: ["[Verktøy 1]", "[Verktøy 2]"]
     },
     {
-      week: "Week 2",
-      date: "[Placeholder date range]",
-      title: "Understanding workflows",
-      summary: "Focused on understanding development and collaboration processes.",
-      workedOn: "[Placeholder] Small support tasks and process observations.",
-      learned: "[Placeholder] Better understanding of project structure and team collaboration.",
-      challenges: "[Placeholder] Balancing speed and quality while learning new systems.",
-      reflection: "[Placeholder] Confidence increased as routines became clearer.",
-      tools: ["[Placeholder tool 1]", "[Placeholder tool 2]", "[Placeholder tool 3]"]
+      week: "Uke 2",
+      date: "[Fyll inn datointervall]",
+      title: "Forstå arbeidsflyter",
+      summary: "Fokus på å forstå utviklings- og samarbeidsprosesser i teamet.",
+      workedOn: "[Fyll inn] Mindre støtteoppgaver og observasjon av prosesser.",
+      learned: "[Fyll inn] Bedre forståelse av prosjektstruktur og samarbeid.",
+      challenges: "[Fyll inn] Balansere tempo og kvalitet mens jeg lærer nye systemer.",
+      reflection: "[Fyll inn] Tryggheten økte etter hvert som rutinene ble klarere.",
+      tools: ["[Verktøy 1]", "[Verktøy 2]", "[Verktøy 3]"]
     }
   ],
   projects: [
     {
-      name: "[Placeholder project name]",
-      description: "[Placeholder] Brief explanation of the project or task scope.",
-      role: "[Placeholder] My role in the project.",
-      technologies: ["[Placeholder technology]", "[Placeholder technology]"],
-      contribution: "[Placeholder] What I contributed.",
-      status: "In progress",
-      learned: "[Placeholder] Main learning outcomes from this project."
+      name: "[Prosjektnavn]",
+      description: "[Fyll inn] Kort beskrivelse av prosjektets eller oppgavens omfang.",
+      role: "[Fyll inn] Min rolle i prosjektet.",
+      technologies: ["[Teknologi]", "[Teknologi]"],
+      contribution: "[Fyll inn] Hva jeg bidro med.",
+      status: "Pågår",
+      learned: "[Fyll inn] Viktigste læringsutbytte fra prosjektet."
     },
     {
-      name: "[Placeholder project name 2]",
-      description: "[Placeholder] Brief explanation of the project or task scope.",
-      role: "[Placeholder] My role in the project.",
-      technologies: ["[Placeholder technology]", "[Placeholder technology]"],
-      contribution: "[Placeholder] What I contributed.",
-      status: "Planned",
-      learned: "[Placeholder] Main learning outcomes from this project."
+      name: "[Prosjektnavn 2]",
+      description: "[Fyll inn] Kort beskrivelse av prosjektets eller oppgavens omfang.",
+      role: "[Fyll inn] Min rolle i prosjektet.",
+      technologies: ["[Teknologi]", "[Teknologi]"],
+      contribution: "[Fyll inn] Hva jeg bidro med.",
+      status: "Planlagt",
+      learned: "[Fyll inn] Viktigste læringsutbytte fra prosjektet."
     }
   ]
 };
