@@ -2,45 +2,36 @@ window.practiceContent = {
   journalEntries: [
     {
       week: "Uke 1",
-      date: "[Fyll inn datointervall]",
-      title: "Oppstart",
-      summary: "Introduksjon til teamet, systemene og målene for praksisperioden.",
-      workedOn: "[Fyll inn] Onboarding og oppsett av arbeidsmiljø.",
-      learned: "[Fyll inn] Første innsikt i arbeidsflyter, verktøy og rutiner.",
-      challenges: "[Fyll inn] Spørsmål og læringskurve i oppstartsuken.",
-      reflection: "[Fyll inn] Tanker om forventninger og egne utviklingsmål.",
-      tools: ["[Verktøy 1]", "[Verktøy 2]"]
+      date: "25.08.2026",
+      title: "Oppstart og prosjektforståelse",
+      summary: "Introduksjon til teamet, systemene og målet om å automatisere oppfølgingen etter kundemøter.",
+      workedOn: "Onboarding, oppsett av arbeidsmiljø og første gjennomgang av kundemøteprosessen.",
+      learned: "Jeg fikk innsikt i hvordan kundemøter kan dokumenteres, og hvorfor strukturert informasjon er viktig for videre oppfølging.",
+      challenges: "Å forstå hvordan behov fra kundemøter kan oversettes til en arbeidsflyt som fungerer for hele teamet.",
+      reflection: "Oppstarten ga meg et tydelig bilde av hvordan prosjektet kan knytte programmering og AI til et konkret forretningsbehov.",
+      tools: ["Claude", "SharePoint", "Teams"]
     },
     {
       week: "Uke 2",
-      date: "[Fyll inn datointervall]",
-      title: "Forstå arbeidsflyter",
-      summary: "Fokus på å forstå utviklings- og samarbeidsprosesser i teamet.",
-      workedOn: "[Fyll inn] Mindre støtteoppgaver og observasjon av prosesser.",
-      learned: "[Fyll inn] Bedre forståelse av prosjektstruktur og samarbeid.",
-      challenges: "[Fyll inn] Balansere tempo og kvalitet mens jeg lærer nye systemer.",
-      reflection: "[Fyll inn] Tryggheten økte etter hvert som rutinene ble klarere.",
-      tools: ["[Verktøy 1]", "[Verktøy 2]", "[Verktøy 3]"]
+      date: "26.–28.08.2026",
+      title: "Kartlegge kundemøteflyten",
+      summary: "Fokus på å kartlegge hvilke opplysninger som skal fanges opp og hvor de skal brukes videre.",
+      workedOn: "Analyse av dagens manuelle prosess og vurdering av hvordan referater, action points og kundepotensial kan struktureres.",
+      learned: "Jeg lærer hvordan SharePoint, Teams, HubSpot og kalenderen kan inngå i samme informasjonsflyt.",
+      challenges: "Å finne riktig balanse mellom en enkel brukeropplevelse, gode AI-vurderinger og kvalitetssikring.",
+      reflection: "Når behovene og systemflyten blir tydeligere, blir det også lettere å se hvilke deler som bør automatiseres først.",
+      tools: ["Claude", "HubSpot", "Kalender"]
     }
   ],
   projects: [
     {
-      name: "[Prosjektnavn]",
-      description: "[Fyll inn] Kort beskrivelse av prosjektets eller oppgavens omfang.",
-      role: "[Fyll inn] Min rolle i prosjektet.",
-      technologies: ["[Teknologi]", "[Teknologi]"],
-      contribution: "[Fyll inn] Hva jeg bidro med.",
-      status: "Pågår",
-      learned: "[Fyll inn] Viktigste læringsutbytte fra prosjektet."
-    },
-    {
-      name: "[Prosjektnavn 2]",
-      description: "[Fyll inn] Kort beskrivelse av prosjektets eller oppgavens omfang.",
-      role: "[Fyll inn] Min rolle i prosjektet.",
-      technologies: ["[Teknologi]", "[Teknologi]"],
-      contribution: "[Fyll inn] Hva jeg bidro med.",
+      name: "Automatisering av kundemøter",
+      description: "Reviver ønsker en strukturert prosess der innsikt fra kundemøter fanges opp konsistent, kvalitetssikres av en AI-assistent og deles med hele teamet.",
+      role: "Utvikle og utforske en løsning som gjør oppfølgingen etter kundemøter mer effektiv og mindre personavhengig.",
+      technologies: ["Claude", "SharePoint", "Teams", "HubSpot", "Kalender"],
+      contribution: "Løsningen skal generere strukturerte referater med action points, pain points, en vurdering av Revivers løsningsmulighet og kvantifisert potensial i tonn og kroner.",
       status: "Planlagt",
-      learned: "[Fyll inn] Viktigste læringsutbytte fra prosjektet."
+      learned: "Prosjektet skal gi erfaring med programmering, AI-integrasjon, systemflyt og utvikling av praktiske løsninger for en virksomhet."
     }
   ]
 };
