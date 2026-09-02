@@ -10,17 +10,6 @@ window.practiceContent = {
       challenges: "Å forstå hvordan behov fra kundemøter kan oversettes til en arbeidsflyt som fungerer for hele teamet.",
       reflection: "Oppstarten ga meg et tydelig bilde av hvordan prosjektet kan knytte programmering og AI til et konkret forretningsbehov.",
       tools: ["Claude", "SharePoint", "Teams"]
-    },
-    {
-      week: "Uke 2",
-      date: "26.–28.08.2026",
-      title: "Kartlegge kundemøteflyten",
-      summary: "Fokus på å kartlegge hvilke opplysninger som skal fanges opp og hvor de skal brukes videre.",
-      workedOn: "Analyse av dagens manuelle prosess og vurdering av hvordan referater, action points og kundepotensial kan struktureres.",
-      learned: "Jeg lærer hvordan SharePoint, Teams, HubSpot og kalenderen kan inngå i samme informasjonsflyt.",
-      challenges: "Å finne riktig balanse mellom en enkel brukeropplevelse, gode AI-vurderinger og kvalitetssikring.",
-      reflection: "Når behovene og systemflyten blir tydeligere, blir det også lettere å se hvilke deler som bør automatiseres først.",
-      tools: ["Claude", "HubSpot", "Kalender"]
     }
   ],
   projects: [
