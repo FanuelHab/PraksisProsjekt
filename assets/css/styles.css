@@ -346,7 +346,7 @@ h3 {
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius);
-  padding: 1.2rem 1.3rem;
+  padding: 0;
   box-shadow: var(--shadow);
   animation: riseIn 0.5s ease both;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -357,14 +357,79 @@ h3 {
   box-shadow: 0 1px 0 rgba(21, 35, 28, 0.04), 0 16px 32px rgba(21, 35, 28, 0.09);
 }
 
+.journal-summary {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.3rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.journal-summary:hover {
+  color: var(--accent);
+}
+
+.journal-summary:focus-visible {
+  border-radius: var(--radius);
+}
+
 .meta {
   font-size: 0.88rem;
   color: var(--ink-muted);
-  margin: 0 0 0.35rem;
+  margin: 0;
 }
 
-.timeline-entry h3 {
-  margin-bottom: 0.85rem;
+.journal-title {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.journal-toggle {
+  position: relative;
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg) translateY(-0.15rem);
+  transition: transform 0.25s ease;
+}
+
+.timeline-entry.is-open .journal-toggle {
+  transform: rotate(225deg) translate(-0.15rem, -0.15rem);
+}
+
+.journal-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
+}
+
+.journal-details-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 1.3rem;
+}
+
+.timeline-entry.is-open .journal-details {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.timeline-entry.is-open .journal-details-inner {
+  padding-bottom: 1.2rem;
 }
 
 .entry-field {
@@ -399,11 +464,18 @@ h3 {
   font-weight: 500;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .journal-details,
+  .journal-toggle {
+    transition: none;
+  }
+}
+
 /* —— Projects —— */
 .project-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .project-entry {
@@ -469,6 +541,63 @@ h3 {
   max-width: 52ch;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 3px 10px rgba(21, 35, 28, 0.05);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.linkedin-logo {
+  display: inline-grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-items: center;
+  border-radius: 4px;
+  background: #0a66c2;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.github-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.social-button .github-logo {
+  display: inline-block;
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+}
+
 .profile {
   margin: 0;
   animation: riseIn 0.6s ease both;
@@ -527,7 +656,6 @@ h3 {
 
 @media (max-width: 920px) {
   .feature-list,
-  .project-grid,
   .learning-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

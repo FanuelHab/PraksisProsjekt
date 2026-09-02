@@ -8,7 +8,9 @@ Responsiv praksisnettside for en student i IT og informasjonssystemer ved UiA so
 - `/assets/css/styles.css` — Styling og responsivt layout
 - `/assets/js/data.js` — Journal- og prosjektdata
 - `/assets/js/main.js` — Dynamisk rendering og mobilmeny
-- `/assets/images/profile-placeholder.svg` — Plassholder for profilbilde
+- `/assets/images/profilbilde.jpg` — Profilbilde til «Om meg»-seksjonen
+
+Legg ditt eget bilde i `assets/images/` og kall filen `profilbilde.jpg`.
 
 ## Oppdatere journalinnlegg
 
