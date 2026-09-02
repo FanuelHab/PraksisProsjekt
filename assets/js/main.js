@@ -21,8 +21,6 @@
             <div class="journal-details" id="journal-details-${index}" aria-hidden="true">
               <div class="journal-details-inner">
                 <p class="entry-field"><strong>Sammendrag</strong> ${entry.summary}</p>
-                <p class="entry-field"><strong>Hva jeg jobbet med</strong> ${entry.workedOn}</p>
-                <p class="entry-field"><strong>Hva jeg lærte</strong> ${entry.learned}</p>
                 <p class="entry-field"><strong>Utfordringer</strong> ${entry.challenges}</p>
                 <p class="entry-field"><strong>Refleksjon</strong> ${entry.reflection}</p>
                 <div class="tag-list" aria-label="Teknologier og verktøy">
