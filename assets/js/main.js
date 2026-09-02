@@ -9,22 +9,43 @@
 
     container.innerHTML = content.journalEntries
       .map(
-        (entry) => `
-          <article class="timeline-entry" tabindex="0">
-            <p class="meta">${entry.week} · ${entry.date}</p>
-            <h3>${entry.title}</h3>
-            <p class="entry-field"><strong>Sammendrag</strong> ${entry.summary}</p>
-            <p class="entry-field"><strong>Hva jeg jobbet med</strong> ${entry.workedOn}</p>
-            <p class="entry-field"><strong>Hva jeg lærte</strong> ${entry.learned}</p>
-            <p class="entry-field"><strong>Utfordringer</strong> ${entry.challenges}</p>
-            <p class="entry-field"><strong>Refleksjon</strong> ${entry.reflection}</p>
-            <div class="tag-list" aria-label="Teknologier og verktøy">
-              ${entry.tools.map((tool) => `<span class="tag">${tool}</span>`).join("")}
+        (entry, index) => `
+          <article class="timeline-entry">
+            <button class="journal-summary" type="button" aria-expanded="false" aria-controls="journal-details-${index}">
+              <span>
+                <span class="meta">${entry.week} · ${entry.date}</span>
+                <span class="journal-title">${entry.title}</span>
+              </span>
+              <span class="journal-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="journal-details" id="journal-details-${index}" aria-hidden="true">
+              <div class="journal-details-inner">
+                <p class="entry-field"><strong>Sammendrag</strong> ${entry.summary}</p>
+                <p class="entry-field"><strong>Hva jeg jobbet med</strong> ${entry.workedOn}</p>
+                <p class="entry-field"><strong>Hva jeg lærte</strong> ${entry.learned}</p>
+                <p class="entry-field"><strong>Utfordringer</strong> ${entry.challenges}</p>
+                <p class="entry-field"><strong>Refleksjon</strong> ${entry.reflection}</p>
+                <div class="tag-list" aria-label="Teknologier og verktøy">
+                  ${entry.tools.map((tool) => `<span class="tag">${tool}</span>`).join("")}
+                </div>
+              </div>
             </div>
           </article>
         `
       )
       .join("");
+
+    container.querySelectorAll(".journal-summary").forEach((summary) => {
+      summary.addEventListener("click", () => {
+        const details = document.getElementById(summary.getAttribute("aria-controls"));
+        const entry = summary.closest(".timeline-entry");
+        const isOpen = summary.getAttribute("aria-expanded") === "true";
+
+        summary.setAttribute("aria-expanded", String(!isOpen));
+        details.setAttribute("aria-hidden", String(isOpen));
+        entry.classList.toggle("is-open", !isOpen);
+      });
+    });
   };
 
   const renderProjects = () => {
