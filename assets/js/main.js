@@ -100,8 +100,49 @@
     }
   };
 
+  const setupAutoHideHeader = () => {
+    const header = document.querySelector(".site-header");
+    const nav = document.getElementById("site-nav");
+    if (!header) {
+      return;
+    }
+
+    const hideThreshold = 80; // don't hide until scrolled past the header itself
+    const revealZone = 70; // px from top of viewport that reveals the header on hover
+    let lastScrollY = window.scrollY;
+
+    const showHeader = () => header.classList.remove("site-header--hidden");
+    const hideHeader = () => header.classList.add("site-header--hidden");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        const currentScrollY = window.scrollY;
+        const navOpen = nav && nav.classList.contains("open");
+
+        if (navOpen || currentScrollY <= hideThreshold) {
+          showHeader();
+        } else if (currentScrollY > lastScrollY) {
+          hideHeader();
+        } else {
+          showHeader();
+        }
+
+        lastScrollY = currentScrollY;
+      },
+      { passive: true }
+    );
+
+    window.addEventListener("mousemove", (event) => {
+      if (event.clientY <= revealZone) {
+        showHeader();
+      }
+    });
+  };
+
   renderJournal();
   renderProjects();
   setupMenuToggle();
   setYear();
+  setupAutoHideHeader();
 })();

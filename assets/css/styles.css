@@ -79,6 +79,11 @@ a:hover {
   backdrop-filter: blur(10px);
   background: rgba(247, 250, 248, 0.86);
   border-bottom: 1px solid rgba(201, 213, 206, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.site-header--hidden {
+  transform: translateY(-100%);
 }
 
 .nav-wrapper {
@@ -95,6 +100,57 @@ a:hover {
   letter-spacing: -0.02em;
   text-decoration: none;
   color: var(--ink);
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  line-height: 0;
+}
+
+.logo-chip img {
+  height: 1.4rem;
+  width: auto;
+  display: block;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 1.9rem;
+  background: var(--line);
+}
+
+.logo-uia {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+.brand-tag {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  padding-left: 0.15rem;
+  border-left: 1px solid var(--line);
+  margin-left: 0.1rem;
+  padding-left: 0.75rem;
+}
+
+.header-accent-bar {
+  height: 6px;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--accent) 55%, var(--accent-hover) 100%);
 }
 
 .menu-toggle {
@@ -486,7 +542,8 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .journal-details,
-  .journal-toggle {
+  .journal-toggle,
+  .site-header {
     transition: none;
   }
 }
@@ -694,9 +751,13 @@ h3 {
     display: inline-flex;
   }
 
+  .brand-tag {
+    display: none;
+  }
+
   .site-nav {
     position: absolute;
-    top: 4.25rem;
+    top: calc(4.25rem + 6px);
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.97);
