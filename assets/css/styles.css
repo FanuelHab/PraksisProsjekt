@@ -429,65 +429,24 @@ h3 {
   color: var(--ink-muted);
 }
 
-.status-media h3 {
-  margin-top: 1.5rem;
-}
-
-.media-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 0.75rem 0 0;
-}
-
-.media-placeholder {
-  margin: 0;
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  gap: 0.5rem;
-  text-align: center;
-  border: 2px dashed var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--ink-muted);
-  padding: 1rem;
-}
-
-.media-placeholder span {
-  font-size: 1.75rem;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.media-placeholder figcaption {
-  font-size: 0.82rem;
-}
-
-.video-placeholder {
+.status-video-frame {
   margin-top: 0.75rem;
-  border: 2px dashed var(--line);
-  border-radius: var(--radius);
+  padding: 1.25rem;
   background: var(--surface);
-  padding: 1.25rem 1.4rem;
-  color: var(--ink-muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
 }
 
-.video-placeholder p {
-  margin: 0 0 0.5rem;
-}
-
-.video-placeholder p:last-child {
-  margin-bottom: 0;
-}
-
-.code-hint {
-  font-family: "IBM Plex Mono", "Consolas", monospace;
-  font-size: 0.85rem;
-  background: var(--bg-deep);
-  border-radius: 6px;
-  padding: 0.5rem 0.7rem;
-  overflow-x: auto;
+.status-video {
+  width: 100%;
+  max-width: 360px;
+  max-height: 70vh;
+  border-radius: 8px;
+  background: #000;
+  display: block;
 }
 
 /* —— Journal timeline —— */
@@ -823,10 +782,6 @@ h3 {
   .info-strip {
     grid-template-columns: 1fr;
   }
-
-  .media-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 720px) {
@@ -866,8 +821,7 @@ h3 {
   .feature-list,
   .project-grid,
   .learning-grid,
-  .status-extra,
-  .media-gallery {
+  .status-extra {
     grid-template-columns: 1fr;
   }
 
