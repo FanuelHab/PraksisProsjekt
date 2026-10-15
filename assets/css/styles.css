@@ -432,6 +432,144 @@ h3 {
   display: block;
 }
 
+.feature-list .feature-wide {
+  grid-column: 1 / -1;
+}
+
+.feature-wide p {
+  max-width: 72ch;
+}
+
+.feature-list p + p {
+  margin-top: 0.85rem;
+}
+
+.status-figure {
+  margin: 0 0 2.25rem;
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.feature-list .status-figure {
+  margin: 0;
+}
+
+.figure-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1.1rem;
+}
+
+.status-image-link {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.status-image {
+  width: 100%;
+  height: auto;
+}
+
+.figure-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.flow + .flow {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px dashed var(--line);
+}
+
+.flow-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.flow--before .flow-label {
+  color: var(--ink-muted);
+}
+
+.flow-steps {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flow-step {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0.6rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.flow-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: calc(-1.75rem / 2);
+  transform: translate(50%, -50%);
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.flow--before .flow-step {
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  color: var(--ink-muted);
+}
+
+.flow--before .flow-step::after {
+  color: var(--ink-muted);
+}
+
+.flow .flow-step--targets {
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.flow-step--targets span {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.flow--before .flow-step--targets span {
+  background: var(--bg-deep);
+  color: var(--ink-muted);
+}
+
 /* —— Journal timeline —— */
 .timeline {
   display: grid;
@@ -809,5 +947,27 @@ h3 {
 
   .section {
     padding: 3.25rem 0;
+  }
+
+  .status-figure {
+    padding: 1.1rem;
+  }
+
+  .flow-steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .flow-step:not(:last-child)::after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    bottom: calc(-1.5rem / 2);
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .flow .flow-step--targets {
+    flex-direction: row;
   }
 }

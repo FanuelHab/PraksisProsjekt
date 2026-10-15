@@ -53,6 +53,15 @@ window.practiceContent = {
       challenges: "Testene avdekket at skillen slo opp dealen først etter at referatet var godkjent når to deals lignet hverandre. Testene viste også at den stilte for mange spørsmål i første svar, og at lead-dashboardet mangler en fast plassering. Jeg rettet dette underveis. Jeg fant også ut at Microsoft 365-koblingen i claude.ai bare kan lese, så skillen må gi en liste over endringene i stedet for å skrive i arket selv.",
       reflection: "Overgangen fra egen app til en Claude-skill, som vi begynte å diskutere i forrige uke, ble nå konkret. Mye av arbeidet handlet om å skrive presise instruksjoner og teste dem mot ekte notater, ikke om å skrive kode. Det var lærerikt å se hvor mye rekkefølgen på stegene og små formuleringer betyr for at AI-en oppfører seg riktig.",
       tools: ["Claude", "Claude-skills", "Excel", "Microsoft 365", "Markdown"]
+    },
+    {
+      week: "Uke 7",
+      date: "14.10.2026",
+      title: "Ny arbeidsflyt: sparring i Claude, oppdatering i Excel",
+      summary: "Denne uken flyttet jeg sparringen fra sidepanelet i Excel til Claude Desktop. Når referatet er godkjent, lager skillen nå en ferdig instruksblokk for hvert ark, både pipeline-arket og lead-dashboardet, som limes inn i Claude i Excel. Blokken finner riktig rad, viser gamle og nye verdier, stopper hvis noe er endret siden, ber om bekreftelse og leser tilbake etterpå. Teams-meldingen ble valgfri og tilbys sammen med oppfølgingseposten i én linje til slutt. E-posten skrives alltid på norsk, også til danske og svenske kunder, og nevner kollegaen ved navn når en kollega er ansvarlig for et action point. Deretter testet jeg: test 11, oppfølgingsepost etter et salgsmøte, besto, og innlimingen besto både i testkopien av pipeline-arket og i lead-dashboardet. Claude i Excel nektet også å bruke en blokk som ble limt inn i feil fil, akkurat som den skulle. Til slutt gikk jeg gjennom en kollegas skill for møteforberedelse. Den brukes egentlig til å vurdere om leads er kvalifisert, ikke bare før møter, så jeg foreslo forbedringer ut fra det.",
+      challenges: "Sparring i sidepanelet i Excel fungerte dårlig i praksis, så arbeidsflyten måtte deles mellom to verktøy. Instruksblokkene måtte derfor være helt selvstendige og trygge, slik at de ikke kan oppdatere feil rad eller feil fil. I tillegg ble zip-filen med skillen avvist av claude.ai med «invalid characters». Årsaken var at Windows-verktøyet skrev filstiene med omvendt skråstrek, og jeg løste det ved å pakke zip-filen med et lite Python-skript i stedet.",
+      reflection: "Denne uken ble det tydelig at samtalen med AI-en hører hjemme ett sted og skrivingen til dataene et annet. Det er bedre å dele arbeidet etter hva hvert verktøy er god på enn å presse alt inn i ett. Jeg lærte også at en liten, kjedelig feil som filstier i en zip kan stoppe hele distribusjonen.",
+      tools: ["Claude", "Claude-skills", "Claude i Excel", "Excel", "Python"]
     }
   ],
   projects: [
