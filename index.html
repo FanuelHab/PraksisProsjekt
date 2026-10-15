@@ -213,9 +213,8 @@
           <p class="eyebrow">Statusrapport 2</p>
           <h2>Status 2: Fra egen app til Claude-skill</h2>
           <p class="section-intro">
-            Siden Status 1 (18.09) har prosjektet tatt en ny retning. Her oppsummerer jeg hva jeg har
-            jobbet med fram til 16.10, hva som har vært utfordrende og spennende, og hvordan veien
-            videre ser ut.
+            Siden Status 1 har prosjektet tatt en ny retning. Her oppsummerer jeg hva jeg har jobbet
+            med, hva som har vært utfordrende og spennende, og hvordan veien videre ser ut.
           </p>
 
           <figure class="status-figure">
@@ -238,34 +237,13 @@
             <article class="feature-wide">
               <h3>Mine arbeidsoppgaver</h3>
               <p>
-                Første del av perioden gikk med til å gjøre ferdig appen «Møtereferat AI». 23.09
-                koblet jeg på HubSpot, slik at møtet ble logget som notat på firmaet og deltakerne, og
-                hvert action point ble en oppgave til den ansvarlige. Appen fikk Revivers visuelle
-                profil, og jeg ryddet i koden: backend ble delt i egne klasser med tester, og en
-                frontend-komponent på rundt 1100 linjer ble delt opp. Jeg strammet også inn sikkerheten
-                med en sperre som bare tillater lesing og nye notater og oppgaver, og flyttet
-                hemmeligheter ut av git.
+                I starten av perioden gjorde jeg ferdig appen «Møtereferat AI». Den fikk kobling mot HubSpot, Revivers visuelle profil og en opprydding i koden, slik at den var klar til bruk.
               </p>
               <p>
-                Samtidig begynte vi å diskutere en annen retning, og endte med å gjøre løsningen om til
-                en Claude-skill. Den deles ut til teamet gjennom Revivers Claude-organisasjon, så den
-                trenger verken egen server eller egen API-nøkkel. Hovedverdien er at møteholderen kan
-                sparre med AI-en og gjøre tynne notater om til et godt referat. 06.–07.10 skrev og
-                testet jeg skillen «reviver-moetereferat». Den lager referat med action points, pain
-                points, løsningsvurdering og potensial, spør etter det som mangler i stedet for å finne
-                på noe, og håndterer flere møtetyper. Den kan også skrive en oppfølgingsepost til
-                kunden, bygget på mønsteret fra selgernes egne e-poster.
+                Underveis bestemte vi oss for å gå en annen vei. I stedet for en egen app gjorde jeg løsningen om til en Claude-skill som hele teamet kan bruke direkte i Claude. Skillen hjelper møteholderen med å gjøre korte notater om til et ferdig referat med action points, kundens behov og videre oppfølging, og kan også skrive en oppfølgingsepost til kunden.
               </p>
               <p>
-                Da HubSpot ble lagt ned i bedriften, overtok et pipeline-ark i Excel. Jeg skrev
-                referansefiler for arket, med kolonner, formater og formler, og skillen oppdaterer nå
-                også et lead-dashboard som en kollega har laget. 14.10 landet vi på en ny arbeidsflyt:
-                sparringen skjer i Claude Desktop, og skillen lager en ferdig instruksblokk per ark som
-                limes inn i Claude i Excel. Blokken finner riktig rad, viser gamle og nye verdier og
-                ber om bekreftelse før noe skrives. Jeg testet alt systematisk med 11 scenarier, både
-                oppdiktede og anonymiserte ekte notater, og til slutt besto innlimingen i både
-                pipeline-arket og lead-dashboardet. Skillen deles ut som en zip-fil, og jeg så også
-                gjennom en kollegas skill for møteforberedelse og foreslo forbedringer.
+                Da bedriften gikk bort fra HubSpot, ble oppfølgingen flyttet til Excel. Jeg tilpasset skillen slik at den kan oppdatere salgsoversikten og en oversikt over leads som en kollega har laget. Mye av tiden gikk også til å teste skillen grundig med ulike typer møtenotater, slik at den er klar til å tas i bruk av teamet.
               </p>
             </article>
 
@@ -301,43 +279,25 @@
             <article>
               <h3>Utfordringer og spennende funn</h3>
               <p>
-                Den største utfordringen var at planene endret seg underveis. HubSpot-integrasjonen jeg
-                brukte en hel dag på, ble overflødig to uker senere. Det lærte meg å bygge løsninger som
-                tåler at systemene rundt endrer seg.
+                Den største utfordringen var at planene endret seg underveis. Noe av det jeg hadde bygget, ble overflødig da bedriften byttet system. Det lærte meg å lage løsninger som tåler at ting rundt dem endrer seg.
               </p>
               <p>
-                Microsoft 365-koblingen i Claude kan bare lese, ikke skrive, så skillen kunne ikke
-                oppdatere arkene selv. Det er grunnen til instruksblokken. En tidlig test viste også at
-                arket ble ødelagt når AI-en lagde en redigert kopi, fordi nedtrekkslister og koblinger
-                forsvant. Derfor returnerer skillen aldri en redigert kopi. Jeg fant også en feil i
-                selve pipeline-arket: summeringsformlene stoppet før de siste radene, så nye deals kom
-                ikke med i totalen. Det rettet jeg i samråd med teamet. Etter ønske fra veileder skriver
-                skillen foreløpig bare til en testkopi av arket.
+                Verktøyene hadde også sine begrensninger. Claude kunne lese Excel-arkene, men ikke skrive i dem direkte, så vi måtte finne en arbeidsflyt der møteholderen alltid godkjenner endringene før de lagres. Underveis fant jeg dessuten en feil i et av arkene, som jeg rettet sammen med teamet.
               </p>
               <p>
-                Mye av jobben var instruksjonsskriving mer enn kode. Testene viste at AI-en noen ganger
-                trakk slutninger som ikke sto i notatene, stilte for mange spørsmål på én gang eller slo
-                opp dealen for sent. Små formuleringer og rekkefølgen på stegene betydde mye. Det mest
-                spennende er å se AI brukt som sparringspartner i hverdagen, ikke bare som en
-                tekstgenerator.
+                Det mest spennende har vært å se AI brukt som en sparringspartner i hverdagen, ikke bare som en tekstgenerator. Jeg har også lært hvor mye små formuleringer i instruksjonene betyr for hvordan AI-en oppfører seg.
               </p>
             </article>
             <article>
               <h3>Annet</h3>
               <p>
-                Overgangen fra å skrive kode til å skrive presise instruksjoner og teste dem mot ekte
-                notater har vært den største endringen for meg. Jeg har også måttet spørre meg om en
-                egen app alltid er riktig svar.
+                Den største endringen for meg har vært å gå fra å skrive kode til å skrive presise instruksjoner og teste dem. Det fikk meg også til å tenke over om en egen app alltid er riktig svar.
               </p>
               <p>
-                Jeg har hatt tett dialog med selgerne, som er hovedbrukerne, og med veileder om
-                tilganger og sikkerhet. Siden jeg er i praksis én dag i uka, må hver dag planlegges
-                godt.
+                Jeg har hatt god dialog med selgerne, som skal bruke løsningen, og med veileder. Siden jeg er i praksis én dag i uka, må hver dag planlegges godt.
               </p>
               <p>
-                Veien videre er å få skillen i bruk hos selgerne, teste hva som skjer når to personer
-                redigerer arket samtidig, og på sikt vurdere automatisering med Power Automate eller en
-                egen skrivekobling.
+                Veien videre er å få skillen i bruk hos selgerne og se hvordan den fungerer i hverdagen.
               </p>
             </article>
           </div>
