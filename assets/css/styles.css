@@ -432,6 +432,11 @@ h3 {
   display: block;
 }
 
+.status-video--wide {
+  max-width: 880px;
+  aspect-ratio: 16 / 9;
+}
+
 .feature-list .feature-wide {
   grid-column: 1 / -1;
 }
